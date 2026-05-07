@@ -154,7 +154,7 @@ class _FeedbackKioskScreenState extends State<FeedbackKioskScreen> {
                   subtitle: copy.brandSubtitle,
                   branchLabel: activeSession == null
                       ? copy.loading
-                      : '${copy.branchPrefix} · ${activeSession.branchName}',
+                      : 'Branch \u2013 ${activeSession.branchName}',
                 ),
                 Expanded(
                   child: Padding(
