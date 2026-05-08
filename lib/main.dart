@@ -305,7 +305,7 @@ class _IntroPanel extends StatelessWidget {
           Text(
             copy.heading,
             style: const TextStyle(
-              color: AppColors.ink,
+              color: Colors.black,
               fontSize: 56,
               fontWeight: FontWeight.w700,
               height: 1.04,
