@@ -26,8 +26,16 @@ class AppHeader extends StatelessWidget {
         final isMobile = w < _kMobile;
         final isTablet = w >= _kMobile && w < _kTablet;
 
-        final double headerHeight = isMobile ? 72 : isTablet ? 90 : 110;
-        final double logoPadH = isMobile ? 24 : isTablet ? 32 : 40;
+        final double headerHeight = isMobile
+            ? 72
+            : isTablet
+            ? 90
+            : 110;
+        final double logoPadH = isMobile
+            ? 24
+            : isTablet
+            ? 32
+            : 40;
 
         return SizedBox(
           width: double.infinity,
@@ -40,25 +48,6 @@ class AppHeader extends StatelessWidget {
                 'assets/images/leco_logo.png',
                 fit: BoxFit.cover,
                 alignment: Alignment.center,
-              ),
-
-              // ── Bottom LECO yellow accent line ────────────────────────
-              Positioned(
-                left: 0,
-                right: 0,
-                bottom: 0,
-                child: Container(
-                  height: isMobile ? 2 : 3,
-                  decoration: const BoxDecoration(
-                    gradient: LinearGradient(
-                      colors: [
-                        Colors.transparent,
-                        AppColors.lecoYellow,
-                        Colors.transparent,
-                      ],
-                    ),
-                  ),
-                ),
               ),
 
               // ── Content row ───────────────────────────────────────────
@@ -98,10 +87,26 @@ class _LecoLogo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final double logoH = isMobile ? 34 : isTablet ? 44 : 54;
-    final double fontSize1 = isMobile ? 11 : isTablet ? 13 : 15;
-    final double fontSize2 = isMobile ? 8.5 : isTablet ? 10 : 11;
-    final double divH = isMobile ? 24 : isTablet ? 30 : 36;
+    final double logoH = isMobile
+        ? 34
+        : isTablet
+        ? 44
+        : 54;
+    final double fontSize1 = isMobile
+        ? 11
+        : isTablet
+        ? 13
+        : 15;
+    final double fontSize2 = isMobile
+        ? 8.5
+        : isTablet
+        ? 10
+        : 11;
+    final double divH = isMobile
+        ? 24
+        : isTablet
+        ? 30
+        : 36;
 
     return Row(
       mainAxisSize: MainAxisSize.min,
@@ -182,7 +187,11 @@ class _BranchLabel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final double fontSize = isMobile ? 11 : isTablet ? 13 : 15;
+    final double fontSize = isMobile
+        ? 11
+        : isTablet
+        ? 13
+        : 15;
     final double dotSize = isMobile ? 6 : 8;
 
     return Row(
